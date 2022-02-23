@@ -1,0 +1,16 @@
+.card{
+    margin: 2rem;
+}
+
+.btn-primary{
+    background-color: rgba(6, 41, 73, 0.404);
+    border-color: rgba(6, 41, 73, 0.404);
+}
+
+.home-img{
+    text-shadow: 2px 2px 2px gray;
+}
+
+.h5{
+    font-family: Helvetica;
+}

@@ -1,0 +1,45 @@
+
+<div class="container mt-5">
+  <div class="card text-center">
+    <br>
+
+    <p>
+      <input type="text" id="ciudad">
+      &nbsp;<input (click)="searchApartamentoByciudad()" type="button" value="Buscar">
+      
+    </p>
+
+    
+      <div class="card-bod">
+          <h2>Tus Mejores Opciones AQUÍ!!</h2>
+          <hr>
+          <div class="d-flex flex-wrap justify-content-evenly mt-5">
+              <div class="card border-info mb-3" style="max-width: 18rem;" *ngFor="let apartamento of allApartamentos let item of apartamento; index as i">
+                  {{i+1}}
+                  <div class="card-header" class="color navbar-light bg-custom" class="p-3 mb-2 bg-warning text-dark"><strong>{{apartamento.ciudad + " - " + apartamento.localidad}}</strong></div>
+                      <div class="card-body">
+                          <h3 class="card-title">Información del inmueble</h3>
+                          <p class="card-text">{{"Tipo Inmueble: " + apartamento.tipoInmueble}}</p>
+                          <p class="card-text">{{"Estrato: " + apartamento.estrato}}</p>
+                          <p class="card-text">{{"Metros Cuadrados: " + apartamento.metrosCuadrados}}</p>
+                          <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
+                          <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
+                          <p class="card-text">{{"Garaje: " + apartamento.garaje}}</p>
+                          <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
+                          <button class="btn btn-danger" method="POST" (click)="deleteApartamento()">Eliminar</button>
+                          <!-- (click)="deleteApartamento(item.apartamento)"
+                           *ngIf="allApartamentos.length > 0"-->
+                      </div>                    
+                  <button class="p-3 mb-2 bg-success text-white"  matTooltip="Mas infomarcion">Mas infomarcion</button>
+              </div>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+              showFirstLastButtons 
+              aria-label="Select page of periodic elements"></mat-paginator>
+          </div>
+          <a class="btn btn-outline-primary" routerLink="">Ir al Home</a>
+      </div>
+</div>
+
+</div>
+
+

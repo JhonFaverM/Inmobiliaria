@@ -1,0 +1,8 @@
+.container {
+    width: 800px;
+}
+
+.card-body{
+    background-color: rgb(168, 238, 234);
+    font-family: Helvetica;
+}

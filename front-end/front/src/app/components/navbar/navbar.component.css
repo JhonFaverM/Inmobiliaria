@@ -1,0 +1,19 @@
+.bg-custom{
+    background-color: rgb(9, 130, 243);
+    color: white;
+}
+
+.navbar-text{
+    color: white;
+
+}
+
+.navbar-ligth .navbar-nav .navbar-link{
+    color: rgb(17, 4, 4);
+}
+
+.navbar{
+    height: 60px;
+    padding: 10px;
+}
+

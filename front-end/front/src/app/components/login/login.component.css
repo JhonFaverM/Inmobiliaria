@@ -1,0 +1,29 @@
+.card{
+    margin: 4rem 8rem 8rem 8rem;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(247, 243, 238);
+}
+
+.login{
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+
+.ancho{
+    width: 80%;
+}
+
+.button{
+    height: 50px;
+}
+
+.color{
+    color: goldenrod;
+}

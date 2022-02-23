@@ -1,0 +1,83 @@
+<!-- 
+<div class="card text-center" *ngFor="let apartamento of apartamentos">
+    <div class="card-body">
+        <h5 class="card-title">{{apartamento.dir}}</h5>
+        <p class="card-text">{{apartamentos.ubicacion}}</p>
+    </div>
+</div>
+ 
+-->
+<div class="container">
+    <mat-toolbar>
+        <span class="colorde">Quieres Eliminar un Inmueble</span>
+        <button mat-button color="primary" class="colorin" routerLink="/gestionar" class="pointer" ><strong>AQUÍ!!</strong></button>    
+    </mat-toolbar>
+</div>
+
+<br>
+
+<div class="containe">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="card card-body">
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.ciudad" type="text" name="title" class="form-control" placeholder="Ciudad" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.localidad" type="text" name="title" class="form-control" placeholder="Localidad o Barrio" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.estrato" type="text" name="title" class="form-control" placeholder="Estrato" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.tipoInmueble" type="text" name="title" class="form-control" placeholder="Tipo Inmueble" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.metrosCuadrados" type="number" name="title" class="form-control" placeholder="Metros Cuadrados" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.precioArriendo" type="number" name="title" class="form-control" placeholder="Precio Arriendo" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.habitaciones" type="number" name="title" class="form-control" placeholder="Nro Habitaciones" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.banos" type="number" name="title" class="form-control" placeholder="Nro Baños" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.garaje" type="text" name="title" class="form-control" placeholder=" Nro Garajes" autofocus required>
+                </div>
+                <br>
+                <div >
+                    <button type="button" class="btn btn-primary" (click)="saveApartamento()" >Guardar</button>
+                </div>             
+            </form>
+        </div>
+        <div class="col-md-8">
+            hola
+        </div>       
+    </div>
+</div>
+
+<!-- 
+    <div class="col-md-8">
+            books
+        </div> //CREAR OTRA COLUMNA
+
+            SELEC ESTRATO
+         <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Estrato</span>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="apartamento.estrato">
+                        <option selected [value]="type" *ngFor="let type of this.estrato">{{type}}</option>
+                    </select>
+                </div>
+-->
+
