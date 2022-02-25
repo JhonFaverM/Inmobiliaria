@@ -9,19 +9,27 @@ const listApartamentos = (req, res)=>{
 
 }
 
+const searchApartamentoByDireccion = (req, res)=>{
+    Apartamento.find({"direccion":req.query.direccion},(err, apartamentos) => {
+        if (err) return res.send(err)
+        return res.send(apartamentos)
+    })
+
+}
+
 const buscarPorCiudad = (req, res)=>{
     Apartamento.ciudad.find((err, apartamentos)=>{
         if(err) res.send(err)
         res.send(apartamentos)
     })
-
 }
+
 
 
 const saveApartamento = (req, res) => {
     let document = req.body;
-    Apartamento.find({ "ciudad": document.ciudad, "localidad": document.localidad,"estrato": document.estrato, "tipoInmueble": document.tipoInmueble,
-        "metrosCuadrados": document.metrosCuadrados, "precioArriendo": document.precioArriendo, "habitaciones": document.habitaciones,"banos": document.banos, "garaje": document.garaje}, (err, apartamentos)  => {
+    Apartamento.find({ "direccion": document.direccion, "ciudad": document.ciudad, "localidad": document.localidad,"estrato": document.estrato, "tipoInmueble": document.tipoInmueble,
+        "metrosCuadrados": document.metrosCuadrados, "precioArriendo": document.precioArriendo, "habitaciones": document.habitaciones,"banos": document.banos}, (err, apartamentos)  => {
        if (err) return res.send(err); 
        if (apartamentos.length > 0) {
            res.status(400).send({type:"error",msg:"El documento ya existe!"});
@@ -40,11 +48,10 @@ const saveApartamento = (req, res) => {
 //Apartamento.find({ "ciudad": document.ciudad, "localidad": document.ciudad}, (err, apartamentos) => {
 
 const deleteApartamento = (req, res) => {
-    Apartamento.deleteOne({ "ciudad":req.query.ciudad, "localidad": req.query.localidad, "estrato": req.query.estrato, "tipoInmueble": req.query.tipoInmueble,
-    "metrosCuadrados": req.query.metrosCuadrados, "precioArriendo": req.query.precioArriendo, "habitaciones": req.query.habitaciones, "banos": req.query.banos, "garaje": req.query.garaje}, (err, mongoResponse)=>{
+    Apartamento.deleteOne({ "direccion":req.query.direccion}, (err, mongoResponse)=>{
         if(err) return res.send(err)
         console.log(mongoResponse)
-        return mongoResponse.deleteCount == 1 ? res.send("Se eliminó un documento") : res.send("No se eliminó ningun documento")
+        return mongoResponse.deletedCount == 1 ? res.send("Se eliminó un documento") : res.send("No se eliminó ningun documento")
     })
 }
 
@@ -56,7 +63,7 @@ const updatePrecioArriendo = (req, res) => {
             return mongoResponse.modifiedCount == 1 ? res.send("Documento actualizado") : res.send("Documento no se actualizó")
         });
     }else{
-        res.send("no ghhdghgdh")
+        res.send("hola..")
     }
 }
 
@@ -68,12 +75,6 @@ const actualizarApartamento = (req, res) => {
     });
 }
 
-const searchApartamentoByCiudad = (req, res)=>{
-    Apartamento.find({"ciudad":req.query.ciudad},(err, apartamentos) => {
-        if (err) return res.send(err)
-        return res.send(apartamentos)
-    })
-}
 
 const mostrarPorLocalidad = (req, res)=>{
     Apartamento.find({"localidad":req.query.localidad}, (err, apartamentos) => {
@@ -107,9 +108,9 @@ module.exports = {
     deleteApartamento,
     updatePrecioArriendo,
     actualizarApartamento,
-    searchApartamentoByCiudad,
+    searchApartamentoByDireccion,
     mostrarPorLocalidad,
     crearApartamento,
-    buscarPorCiudad
+    buscarPorCiudad,
 
 }

@@ -29,11 +29,15 @@
                 </div>
                 <br>
                 <div class="form-group">
-                    <input [(ngModel)]="apartamento.estrato" type="text" name="title" class="form-control" placeholder="Estrato" autofocus required>
+                    <input [(ngModel)]="apartamento.tipoInmueble" type="text" name="title" class="form-control" placeholder="Tipo Inmueble" autofocus required>
                 </div>
                 <br>
                 <div class="form-group">
-                    <input [(ngModel)]="apartamento.tipoInmueble" type="text" name="title" class="form-control" placeholder="Tipo Inmueble" autofocus required>
+                    <input [(ngModel)]="apartamento.direccion" type="text" name="title" class="form-control" placeholder=" Direccion" autofocus required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input [(ngModel)]="apartamento.estrato" type="text" name="title" class="form-control" placeholder="Estrato" autofocus required>
                 </div>
                 <br>
                 <div class="form-group">
@@ -52,18 +56,11 @@
                     <input [(ngModel)]="apartamento.banos" type="number" name="title" class="form-control" placeholder="Nro Baños" autofocus required>
                 </div>
                 <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.garaje" type="text" name="title" class="form-control" placeholder=" Nro Garajes" autofocus required>
-                </div>
-                <br>
                 <div >
                     <button type="button" class="btn btn-primary" (click)="saveApartamento()" >Guardar</button>
                 </div>             
             </form>
-        </div>
-        <div class="col-md-8">
-            hola
-        </div>       
+        </div>   
     </div>
 </div>
 
@@ -79,5 +76,10 @@
                         <option selected [value]="type" *ngFor="let type of this.estrato">{{type}}</option>
                     </select>
                 </div>
+
+
+                <div class="col-md-8"> //crear card de al lada
+            hola
+        </div>    
 -->
 

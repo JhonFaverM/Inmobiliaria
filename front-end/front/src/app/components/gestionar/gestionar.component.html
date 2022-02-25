@@ -3,11 +3,12 @@
   <div class="card text-center">
     <br>
 
-    <p>
-      <input type="text" id="ciudad">
-      &nbsp;<input (click)="searchApartamentoByciudad()" type="button" value="Buscar">
-      
-    </p>
+    <div>
+      <p>
+        <input type="text" id="ciudad" (click)="searchByDireccion(direccion)">
+        &nbsp;<input type="button" value="Buscar">
+        
+      </p>
 
     
       <div class="card-bod">
@@ -18,15 +19,15 @@
                   {{i+1}}
                   <div class="card-header" class="color navbar-light bg-custom" class="p-3 mb-2 bg-warning text-dark"><strong>{{apartamento.ciudad + " - " + apartamento.localidad}}</strong></div>
                       <div class="card-body">
-                          <h3 class="card-title">Información del inmueble</h3>
+                          <h3 class="card-title"><strong>Información del inmueble</strong></h3>
                           <p class="card-text">{{"Tipo Inmueble: " + apartamento.tipoInmueble}}</p>
+                          <p class="card-text">{{"Dirección: " + apartamento.direccion}}</p>
                           <p class="card-text">{{"Estrato: " + apartamento.estrato}}</p>
                           <p class="card-text">{{"Metros Cuadrados: " + apartamento.metrosCuadrados}}</p>
+                          <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
                           <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
                           <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
-                          <p class="card-text">{{"Garaje: " + apartamento.garaje}}</p>
-                          <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
-                          <button class="btn btn-danger" method="POST" (click)="deleteApartamento()">Eliminar</button>
+                          <button class="btn btn-danger" (click)="deleteApartamento()">Eliminar</button>
                           <!-- (click)="deleteApartamento(item.apartamento)"
                            *ngIf="allApartamentos.length > 0"-->
                       </div>                    
@@ -38,6 +39,7 @@
           </div>
           <a class="btn btn-outline-primary" routerLink="">Ir al Home</a>
       </div>
+    </div>
 </div>
 
 </div>

@@ -35,14 +35,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.authService.isLogged()? this.routerService.navigate(['/home']) : console.log("No está logeado");
   }
-  /*
-  login(){
-    if(this.loginData.password! && this.loginData.usuario!){
-      this.HttpClient.post("http://localhost:5000/login", this.loginData, {headers:{"Conten-Type":"applicacion/json"}}).subscribe((response)=>{
-        console.log(response);
-      })  
-    }
-  } */
 
   login(){
     if(this.asesores.password! && this.asesores.usuario!){
@@ -70,20 +62,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
-
-
-/*
- login() {
-    console.log(this.datosLogin)
-    this.authService.loginUser(this.datosLogin).subscribe((res) => {
-      if ((res as any).token) {
-        localStorage.setItem('token', (res as any).token)
-        this.routerService.navigate(['/dashboard'])
-      }else{
-        this.toastr.error((res as any).msg, 'Error!');
-      }
-    })
-  }
-*/ 
-
 

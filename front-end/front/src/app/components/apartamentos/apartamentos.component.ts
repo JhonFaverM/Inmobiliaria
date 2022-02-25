@@ -19,20 +19,15 @@ export class ApartamentosComponent implements OnInit {
   apartamento: any = {
     ciudad:"",
     localidad:"",
-    estrato:"",
     tipoInmueble:"",
+    direccion:"",
+    estrato:"",
     metrosCuadrados:"",
     precioArriendo:"",
     habitaciones:"",
     baños:"",
-    garaje:""
+    
   }
-
-  id = this.apartamento;
-
-  //ciudad = document.getElementById("apartamento");
-  //boton = document.getElementById("botoncito");
-  //boton.addEventListener("click", searchApartamentoByciudad); 
 
   constructor(private apartamentoService: ApartamentosService, private toastr: ToastrService,) {     
   }
@@ -71,7 +66,6 @@ export class ApartamentosComponent implements OnInit {
     
   }
 
-  //getApartamentosByCiudad
 
   
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { ApartamentosService } from 'src/app/services/apartamentos.service';
 import { ToastrService } from 'ngx-toastr';
@@ -15,18 +14,20 @@ export class GestionarComponent implements OnInit {
   apartamento: any = {
     ciudad:"",
     localidad:"",
-    estrato:"",
     tipoInmueble:"",
+    direccion:"",
+    estrato:"",
     metrosCuadrados:"",
     precioArriendo:"",
     habitaciones:"",
-    baños:"",
-    garaje:""
+    banos:"",
+   
   }
 
   //dataSource = new MatTableDataSource(this.apartamento);
   dataSource: any;
   allApartamentos: any;
+  direccion: any;
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -47,9 +48,6 @@ export class GestionarComponent implements OnInit {
     this.getAllApartamentos()
   }
 
-  eliminarFactura(){
-  }
-
  
   
   applyFilter(event: Event) {
@@ -59,36 +57,40 @@ export class GestionarComponent implements OnInit {
    
   
   
-   searchApartamentoByciudad(): void{
-    if(this.apartamento.ciudad){
-      this.apartamentoService.getApartamentosByCiudad(this.apartamento).subscribe((respuesta)=>{
+   searchByDireccion(direccion: any): void{
+    if(this.apartamento.direccion){
+      this.apartamentoService.getAllApartamentos().subscribe((respuesta)=>{
         if((respuesta as any).Type=="error"){
           this.toastr.success((respuesta as any).msg, 'Error');          
         }else{
           this.toastr.success((respuesta as any).msg, 'Bien!');
-          this.searchApartamentoByciudad()
+          this.searchByDireccion(direccion)
         }
+        console.log(this.apartamento)
       })
     }
-    console.log("desde search")
+  }
+
+
   
-  }
-
-  deleteApartamento(){
-    
-  }
-
-
-  /**
      async deleteApartamento(){
-    this.apartamentoService.deleteApartamento(this.apartamento).subscribe((apartamentos)=>{
-      this.allApartamentos = apartamentos
-    })
-  }
-   */
+      if(this.apartamento.direccion){
+          this.apartamentoService.deleteApartamento(this.apartamento).subscribe((respuesta)=>{
+            if((respuesta as any).type=="error"){
+           }else{
+            this.allApartamentos() 
+           }
+           //this.allApartamentos = apartamentos
+          })
+          console.log("inmueble borrado");
+          console.log(this.apartamento)
+        }
+      }
  
 
   //db.apartamentos.find({ciudad:{$lt:"chipre"}})
+
+  
    
 
   

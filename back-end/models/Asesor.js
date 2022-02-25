@@ -17,7 +17,7 @@ const asesorSchema = new Schema({
 });
 
 asesorSchema.methods.generarJWT = () => {
-    return jwt.sing({ _id: this._id, usuario: this.usuario, password: this.password, nombre: this.nombre, },"node-house")
+    return jwt.sing({ _id: this._id, usuario: this.usuario, nombre: this.nombre, },"node-house")  //clave para verificar en middleware node
 }
 
 module.exports = model("Asesor", asesorSchema,"asesores")

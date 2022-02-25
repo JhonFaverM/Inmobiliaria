@@ -21,13 +21,13 @@
                     {{i+1}}
                     <div class="card-header" class="color navbar-light bg-custom"  class="p-3 mb-2 bg-warning text-dark"><strong>{{apartamento.ciudad + " - " + apartamento.localidad}}</strong></div>
                         <div class="card-body">
-                            <h3 class="card-title">Información del inmueble</h3>
+                            <h3 class="card-title"><strong>Información del inmueble</strong></h3>
                             <p class="card-text">{{"Tipo Inmueble: " + apartamento.tipoInmueble}}</p>
+                            <p class="card-text">{{"Dirección: " + apartamento.direccion}}</p>
                             <p class="card-text">{{"Estrato: " + apartamento.estrato}}</p>
                             <p class="card-text">{{"Metros Cuadrados: " + apartamento.metrosCuadrados}}</p>
                             <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
                             <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
-                            <p class="card-text">{{"Garaje: " + apartamento.garaje}}</p>
                             <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
                         </div>                    
                     <button  matTooltip="Ver fotos" class="pointer" class="p-3 mb-2 bg-success text-white">Mas infomarcion</button>

@@ -27,17 +27,22 @@ export class ApartamentosService {
     return this.httpClient.delete("http://localhost:5000/apartamentos/")
   }
 
-  postCreateApartamento(apartamento: any){
-    return this.httpClient.post("http://localhost:5000/apartamentos/",apartamento,{headers: {"Content-Type": "application/json"} })
+  postCreateApartamento(ciudad: any){
+    return this.httpClient.post("http://localhost:5000/apartamentos/",ciudad,{headers: {"Content-Type": "application/json"} })
   }
 
-  getApartamentosByCiudad(ciudad:any){
-    return this.httpClient.get("http://localhost:5000/apartamentos/",ciudad)
+  getApartamentosByDireccion(direccion:any){
+    return this.httpClient.get("http://localhost:5000/apartamentos/",direccion)
   }
 
   searchApartamentoByCiudad(ciudad: any){
     return this.httpClient.get("http://localhost:5000/apartamentos/",ciudad)
   }
+
+  searchByDireccion(){
+    return this.httpClient.get("http://localhost:5000/apartamentos/ciudad")
+  }
+
 
 }
 
