@@ -1,5 +1,10 @@
+<body class="colorin">
 
 <div class="container">
+
+    <a href="index.html" id="logo">
+        <img class="log" src="../../../assets/img/casa.png">
+      </a>
 
         
     <h2>Filtrar por Inmueble</h2>
@@ -10,35 +15,36 @@
     </p>
 </div>
 
-
-<div class="container mt-5">
-    <div class="card text-center">
-        <div class="card-body">
-            <h2>Tus Mejores Opciones AQUÍ!!</h2>
-            <hr>
-            <div class="d-flex flex-wrap justify-content-evenly mt-5">
-                <div class="card border-info mb-3" style="max-width: 18rem;" *ngFor="let apartamento of allApartamentos let item of apartamento; index as i">
-                    {{i+1}}
-                    <div class="card-header" class="color navbar-light bg-custom"  class="p-3 mb-2 bg-warning text-dark"><strong>{{apartamento.ciudad + " - " + apartamento.localidad}}</strong></div>
-                        <div class="card-body">
-                            <h3 class="card-title"><strong>Información del inmueble</strong></h3>
-                            <p class="card-text">{{"Tipo Inmueble: " + apartamento.tipoInmueble}}</p>
-                            <p class="card-text">{{"Dirección: " + apartamento.direccion}}</p>
-                            <p class="card-text">{{"Estrato: " + apartamento.estrato}}</p>
-                            <p class="card-text">{{"Metros Cuadrados: " + apartamento.metrosCuadrados}}</p>
-                            <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
-                            <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
-                            <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
-                        </div>                    
-                    <button  matTooltip="Ver fotos" class="pointer" class="p-3 mb-2 bg-success text-white">Mas infomarcion</button>
+    <div class="container mt-5">
+        <div class="card text-center colorin">
+            <div class="card-body">
+                <h2>Tus Mejores Opciones AQUÍ!!</h2>
+                <hr>
+                <div class="d-flex flex-wrap justify-content-evenly mt-5">
+                    <div class="card border-info mb-3" style="max-width: 18rem;" *ngFor="let apartamento of allApartamentos let item of apartamento; index as i">
+                        {{i+1}}
+                        <div class="card-header" class="color navbar-light bg-custom"  class="p-3 mb-2 bg-warning text-dark"><strong>{{apartamento.ciudad + " - " + apartamento.localidad}}</strong></div>
+                            <div class="card-body">
+                                <h3 class="card-title"><strong>Información del inmueble</strong></h3>
+                                <p class="card-text">{{"Tipo Inmueble: " + apartamento.tipoInmueble}}</p>
+                                <p class="card-text">{{"Dirección: " + apartamento.direccion}}</p>
+                                <p class="card-text">{{"Estrato: " + apartamento.estrato}}</p>
+                                <p class="card-text">{{"Metros Cuadrados: " + apartamento.metrosCuadrados}}</p>
+                                <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
+                                <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
+                                <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
+                            </div>                    
+                        <button  matTooltip="Ver fotos" class="pointer" class="p-3 mb-2 bg-success text-white">Mas infomarcion</button>
+                    </div>
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                    showFirstLastButtons 
+                    aria-label="Select page of periodic elements"></mat-paginator>
                 </div>
-                <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                showFirstLastButtons 
-                aria-label="Select page of periodic elements"></mat-paginator>
+                <a class="btn btn-outline-primary"  matTooltip="Pagina pricipal" class="pointer" routerLink="">Ir al Home</a>
             </div>
-            <a class="btn btn-outline-primary"  matTooltip="Pagina pricipal" class="pointer" routerLink="">Ir al Home</a>
         </div>
     </div>
-</div>
+</body>
+
 
 

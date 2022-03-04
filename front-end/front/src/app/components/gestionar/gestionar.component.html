@@ -1,11 +1,15 @@
 
+<a href="index.html" id="logo">
+  <img class="log" src="../../../assets/img/casa.png">
+</a>
+
 <div class="container mt-5">
   <div class="card text-center">
     <br>
 
     <div>
       <p>
-        <input type="text" id="ciudad" (click)="searchByDireccion(direccion)">
+        <input type="text" id="ciudad" [(ngModel)]="apartamento.direccion" (click)="searchByDireccion(direccion)">
         &nbsp;<input type="button" value="Buscar">
         
       </p>
@@ -27,7 +31,7 @@
                           <p class="card-text">{{"Precio Arriendo: " + apartamento.precioArriendo}}</p>
                           <p class="card-text">{{"Habitaciones: " + apartamento.habitaciones}}</p>
                           <p class="card-text">{{"Baños: " + apartamento.banos}}</p>
-                          <button class="btn btn-danger" (click)="deleteApartamento()">Eliminar</button>
+                          <button class="btn btn-danger" (click)="deleteApartamento(apartamento)">Eliminar</button>
                           <!-- (click)="deleteApartamento(item.apartamento)"
                            *ngIf="allApartamentos.length > 0"-->
                       </div>                    

@@ -10,7 +10,6 @@ const { deleteApartamento, buscarPorCiudad, listApartamentos, saveApartamento, u
  apartamentos.get('/', listApartamentos);
  //apartamentos.get('/', searchApartamentoByCiudad);
  apartamentos.post('/', saveApartamento);
- apartamentos.post('/update', deleteApartamento);
  apartamentos.put('/update', actualizarApartamento);
  apartamentos.patch('/', updatePrecioArriendo);
  apartamentos.get('/buscarPorCiudad', buscarPorCiudad);

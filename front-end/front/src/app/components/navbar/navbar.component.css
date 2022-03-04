@@ -8,12 +8,17 @@
 
 }
 
-.navbar-ligth .navbar-nav .navbar-link{
-    color: rgb(17, 4, 4);
-}
-
 .navbar{
     height: 60px;
     padding: 10px;
+}
+
+.point{
+    list-style: none;
+    color:#6991ac
+}
+
+.rigth{
+    float: right;
 }
 

@@ -51,7 +51,7 @@ export class GestionComponent implements OnInit {
         }else{
           document.getElementById("closeModal")?.click()
           this.toastr.success((respuesta as any).msg, 'Bien!');
-          this.allApartamentos()
+          this.allApartamentos
         }
       })
     }else{

@@ -7,62 +7,73 @@
 </div>
  
 -->
-<div class="container">
-    <mat-toolbar>
-        <span class="colorde">Quieres Eliminar un Inmueble</span>
-        <button mat-button color="primary" class="colorin" routerLink="/gestionar" class="pointer" ><strong>AQUÍ!!</strong></button>    
-    </mat-toolbar>
-</div>
 
-<br>
 
-<div class="containe">
-    <div class="row">
-        <div class="col-md-4">
-            <form class="card card-body">
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.ciudad" type="text" name="title" class="form-control" placeholder="Ciudad" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.localidad" type="text" name="title" class="form-control" placeholder="Localidad o Barrio" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.tipoInmueble" type="text" name="title" class="form-control" placeholder="Tipo Inmueble" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.direccion" type="text" name="title" class="form-control" placeholder=" Direccion" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.estrato" type="text" name="title" class="form-control" placeholder="Estrato" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.metrosCuadrados" type="number" name="title" class="form-control" placeholder="Metros Cuadrados" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.precioArriendo" type="number" name="title" class="form-control" placeholder="Precio Arriendo" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.habitaciones" type="number" name="title" class="form-control" placeholder="Nro Habitaciones" autofocus required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <input [(ngModel)]="apartamento.banos" type="number" name="title" class="form-control" placeholder="Nro Baños" autofocus required>
-                </div>
-                <br>
-                <div >
-                    <button type="button" class="btn btn-primary" (click)="saveApartamento()" >Guardar</button>
-                </div>             
-            </form>
-        </div>   
+<body class="colorin">
+
+    <div class="container">
+        <mat-toolbar>
+            <a href="index.html" id="logo">
+                <img class="log" src="../../../assets/img/casa.png">
+            </a>
+            <span class="colorde">Quieres Eliminar un Inmueble</span>
+            <button mat-button color="primary" routerLink="/login" class="pointer" ><strong>AQUÍ!!</strong></button>    
+        </mat-toolbar>
     </div>
-</div>
+    
+    <br>
+    
+    <div class="containe">
+        <div class="row">
+            <div class="col-md-4">
+                <form class="card card-body">
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.ciudad" type="text" name="title" class="form-control" placeholder="Ciudad" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.localidad" type="text" name="title" class="form-control" placeholder="Localidad o Barrio" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.tipoInmueble" type="text" name="title" class="form-control" placeholder="Tipo Inmueble" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.direccion" type="text" name="title" class="form-control" placeholder=" Direccion" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.estrato" type="text" name="title" class="form-control" placeholder="Estrato" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.metrosCuadrados" type="number" name="title" class="form-control" placeholder="Metros Cuadrados" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.precioArriendo" type="number" name="title" class="form-control" placeholder="Precio Arriendo" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.habitaciones" type="number" name="title" class="form-control" placeholder="Nro Habitaciones" autofocus required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input [(ngModel)]="apartamento.banos" type="number" name="title" class="form-control" placeholder="Nro Baños" autofocus required>
+                    </div>
+                    <br>
+                    <div >
+                        <button type="button" class="btn btn-primary" (click)="saveApartamento()" >Guardar</button>
+                    </div>
+                </form>
+                <br>
+            </div>   
+        </div>
+    </div>
+</body>
+
+
 
 <!-- 
     <div class="col-md-8">

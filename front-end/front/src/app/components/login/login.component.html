@@ -39,25 +39,29 @@
 </div>
 -->
 
-<div class="body">
-  <div class="login">
-  <h1 class="color"><strong>South Real Estate</strong></h1>
-    <form [formGroup]="form" (submit)="login()">
-      <img src="../../../assets/img/usuario.png.png"  width="50%">
-      <h1 class="color">Iniciar Sesion</h1>
-      <mat-form-field class="ancho" appearance="fill">
-        <mat-label  for="user" class="form-label">Usuario</mat-label>
-        <input matInput autocomplete="off" formControlName="usuario" id="user" name="user" aria-describedby="emailHelp" [(ngModel)]="asesores.usuario">
-      </mat-form-field>
-      <mat-form-field class="ancho" appearance="fill">
-        <mat-label>Contraseña</mat-label>
-        <input matInput autocomplete="off" formControlName="password"  type="password" [(ngModel)]="asesores.password">
-      </mat-form-field>
-      <br>
-      <button class="ancho button" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Ingresar</button>
-    </form>
+
+<body class="">
+  <div class="body colorin">
+    <div class="login">
+    <h1 class="color"><strong>South Real Estate</strong></h1>
+      <form [formGroup]="form" (submit)="login()">
+        <img src="../../../assets/img/usuario.png.png"  width="50%">
+        <h1 class="color">Iniciar Sesion</h1>
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-label  for="user" class="form-label">Usuario</mat-label>
+          <input matInput autocomplete="off" formControlName="usuario" id="user" name="user" aria-describedby="emailHelp" [(ngModel)]="asesores.usuario">
+        </mat-form-field>
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput autocomplete="off" formControlName="password"  type="password" [(ngModel)]="asesores.password">
+        </mat-form-field>
+        <br>
+        <button class="ancho button" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Ingresar</button>
+      </form>
+    </div>
   </div>
-</div>
+</body>
+
 
 
 

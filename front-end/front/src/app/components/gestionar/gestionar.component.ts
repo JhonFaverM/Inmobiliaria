@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ApartamentosService } from 'src/app/services/apartamentos.service';
 import { ToastrService } from 'ngx-toastr';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-gestionar',
@@ -41,7 +42,7 @@ export class GestionarComponent implements OnInit {
   }
 
 
-  constructor(private apartamentoService: ApartamentosService,  private toastr: ToastrService) { }
+  constructor(private apartamentoService: ApartamentosService,  private toastr: ToastrService,  private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.allApartamentos = []
@@ -57,7 +58,7 @@ export class GestionarComponent implements OnInit {
    
   
   
-   searchByDireccion(direccion: any): void{
+  searchByDireccion(direccion: any): void{
     if(this.apartamento.direccion){
       this.apartamentoService.getAllApartamentos().subscribe((respuesta)=>{
         if((respuesta as any).Type=="error"){
@@ -73,29 +74,41 @@ export class GestionarComponent implements OnInit {
 
 
   
-     async deleteApartamento(){
-      if(this.apartamento.direccion){
-          this.apartamentoService.deleteApartamento(this.apartamento).subscribe((respuesta)=>{
-            if((respuesta as any).type=="error"){
-           }else{
-            this.allApartamentos() 
-           }
-           //this.allApartamentos = apartamentos
+  /**
+   async deleteApartamento(){
+          this.apartamentoService.deleteApartamento(this.apartamento).subscribe((apartamentos)=>{           
+           this.allApartamentos = apartamentos
           })
           console.log("inmueble borrado");
           console.log(this.apartamento)
-        }
+        
       }
  
+   */
 
-  //db.apartamentos.find({ciudad:{$lt:"chipre"}})
 
   
-   
+  deleteApartamento(apartamento: any) {
+    console.log(this.apartamento);
+
+    this.apartamentoService.deleteApartamento(this.direccion).subscribe((apartamentos)=>{
+    this.allApartamentos = this.apartamento
+    })
+    this._snackBar.open('Inmueble eliminado', '', {
+      duration: 1500,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom'
+    })
+  }
 
   
 
 }
 
 
+
+ 
+ 
+
+ 
 

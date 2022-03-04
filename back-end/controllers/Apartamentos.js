@@ -48,7 +48,7 @@ const saveApartamento = (req, res) => {
 //Apartamento.find({ "ciudad": document.ciudad, "localidad": document.ciudad}, (err, apartamentos) => {
 
 const deleteApartamento = (req, res) => {
-    Apartamento.deleteOne({ "direccion":req.query.direccion}, (err, mongoResponse)=>{
+    Apartamento.deleteOne({}, (err, mongoResponse)=>{
         if(err) return res.send(err)
         console.log(mongoResponse)
         return mongoResponse.deletedCount == 1 ? res.send("Se eliminó un documento") : res.send("No se eliminó ningun documento")

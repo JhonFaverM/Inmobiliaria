@@ -6,3 +6,10 @@
     background-color: rgb(168, 238, 234);
     font-family: Helvetica;
 }
+
+.log{
+    margin: 30px;
+    float: left;
+    width: 70px;
+
+}

@@ -1,29 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inmobiliaria South Real Estate</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font.awesome/4.7.0/css/font-awesome.min.css">
+  <!-- slider-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-<div class="card text-center">
+</head>
+<body class="color">
+
+  <div id="wrapper">
+
+    <!-- Banner-->
+    <div class="banner-wrapper"> 
+      <header>
+        <div class="header-inner"> 
+          <a href="index.html" id="logo">
+            <img class="log" src="../../../assets/img/casa.png">
+          </a>
+          <nav>
+            <a>
+              <span class="material-icons">
+                menu
+              </span>
+            </a>
+            <ul class="point">
+              <li routerLink="/home">Home</li>
+              <li routerLink="/apartamentos">Apartamentos</li>
+              <li routerLink="/contacto">Contacto</li>
+              <li routerLink="/login">Login</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="slider-wrap">
+        <ul>
+          <li>
+            <img class="inmobiliaria" src="../../../assets/img/inmobiliaria2.jpeg">
+          </li>
+        </ul>
+      </div>
+
+
+        
+        
+      
+
+    </div>
+
+  </div>
+
+  <div class="one-third-padding color" id="contactos">
+    <h3 class="titulo">Contactanos</h3>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quisquam.</p>
+  </div>
+
+  <footer class="colorun">
+    <div  class="banner-wrapper">
+      <div class="icon-text">
+        <div class="icon-text-icon">
+          <ul>
+            <li>
+              <a href="#skills">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="icon-text-text">
+          <ul class="social">
+            <li>
+              <a href="http://facebook.com/JesusAutorDeVida"  target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/JesusAutorDeVida"  target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://youtube.com/JesusAutorDeVida"  target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>   
+  </footer>
+
+  <footer class="second-footer">
+    <p>
+      <span class="material-icons">
+        copyright 
+      </span>
+    </p>
+    <a>.</a>
+  </footer>
+  
+</body>
+</html>
+
+
+
+
+<!-- 
+
+  <div class="card text-center">
   <h5 class="card-title">Bienvenido a su Inmobiliaria South Real Estate..!! </h5>
 
+ 
   <img class="home-img" src="../../../assets/zonas-verde-casa.jpg" height="300px">
-  <div class="card-body" >
-        <p class="card-text">Las mejores ofertas que se ajustan para tu necesidad</p>
-        <a routerLink="/apartamentos" class="btn btn-primary">Ver Apartamentos</a>
-        <br>
-        <br>
-        <a routerLink="/login" class="btn btn-primary" *ngIf="!isLogged">Login</a>
-      </div>
-    
 
 
-    <!-- 
-      <section>
-      <div>
-        <a href="">
-          <img typeof="foaf:Image" class="img-responsive" src="https://www.google.com/search?q=torre%20de%20apartamentos%20amarillo%20en%20suecia&tbm=isch&tbs=rimg:CWgQ4iRMBLhPYa8doqwig4KesgIMCgIIABAAOgQIABAA&hl=es-419&sa=X&ved=0CBsQuIIBahcKEwjIjoKp5Oz1AhUAAAAAHQAAAAAQDw&biw=1349&bih=625#imgrc=MSfsBfF1vzqSbM" width="1500" height="700">
-        </a>
-      </div>
-    </section>
-    -->
-    
-    <div class="card-footer text-muted">
-      2 days ago
-    </div>
+<div class="card-body" >
+  <p class="card-text">Las mejores ofertas que se ajustan para tu necesidad</p>
+  <a routerLink="/apartamentos" class="btn btn-primary">Ver Apartamentos</a>
+  <br>
+  <br>
+  <a routerLink="/login" class="btn btn-primary" *ngIf="!isLogged">Login</a>
 </div>
+
+
+
+<div class="card-footer text-muted">
+2 days ago
+</div>
+</div>
+
+
+//fincion slider
+
+<script>
+    $(document).ready(function() {
+      $('.slider1').bxSlider({
+        mode: 'fade'
+      });
+      $('.slider2').bxSlider({
+        mode: 'fade'
+      });
+    });
+  </script>
+
+
+
+  <section class="one-third" id="contacto">
+            <span class="material-icons">
+              contacts
+            </span>
+          </section>
+-->
